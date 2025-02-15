@@ -1,21 +1,23 @@
 #ifndef ASP_QUEUE_H_
 #define ASP_QUEUE_H_
 
+/*Genericka klasa FIFO reda koja je implementirana pomocu ulancane liste.*/
+
 template <typename T>
 class Queue {
 public:
-    void insertQueue(T* d);
+    void insertQueue(T& d);
 
-    T* deleteQueue();
+    T deleteQueue();
 
     bool queueEmpty() const;
 
 private:
     struct Element {
         Element* next;
-        T* data;
+        T data;
 
-        Element(T* d, Element* n = nullptr) : data(d), next(n) {}
+        Element(T& d, Element* n = nullptr) : data(d), next(n) {}
     };
 
     Element* front = nullptr;
@@ -23,7 +25,7 @@ private:
 };
 
 template <typename T>
-void Queue<T>::insertQueue(T *d) {
+void Queue<T>::insertQueue(T& d) {
     Element* novi = new Element(d);
 
     if (queueEmpty()) {
@@ -37,9 +39,9 @@ void Queue<T>::insertQueue(T *d) {
 }
 
 template <typename T>
-T* Queue<T>::deleteQueue() {
+T Queue<T>::deleteQueue() {
     if (queueEmpty()) return nullptr;
-    T* info = front->data;
+    T info = front->data;
     Element* old = front;
     front = front->next;
     if (front == nullptr) rear = nullptr;
@@ -52,6 +54,5 @@ bool Queue<T>::queueEmpty() const {
     if (front == nullptr) return true;
     return false;
 }
-
 
 #endif
