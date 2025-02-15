@@ -6,7 +6,7 @@
 template <typename T>
 class Queue {
 public:
-    void insertQueue(T& d);
+    Queue<T>& insertQueue(T& d);
 
     T deleteQueue();
 
@@ -25,7 +25,7 @@ private:
 };
 
 template <typename T>
-void Queue<T>::insertQueue(T& d) {
+Queue<T>& Queue<T>::insertQueue(T& d) {
     Element* novi = new Element(d);
 
     if (queueEmpty()) {
@@ -36,6 +36,8 @@ void Queue<T>::insertQueue(T& d) {
         rear->next = novi;
         rear = novi;
     }
+
+    return *this;
 }
 
 template <typename T>
