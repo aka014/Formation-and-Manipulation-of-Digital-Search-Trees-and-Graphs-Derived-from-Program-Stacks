@@ -1,6 +1,9 @@
 #ifndef ASP_QUEUE_H_
 #define ASP_QUEUE_H_
 
+#include <iostream>
+using namespace std;
+
 /*Genericka klasa FIFO reda koja je implementirana pomocu ulancane liste.*/
 
 template <typename T>
@@ -42,13 +45,17 @@ Queue<T>& Queue<T>::insertQueue(T& d) {
 
 template <typename T>
 T Queue<T>::deleteQueue() {
-    if (queueEmpty()) return nullptr;
-    T info = front->data;
-    Element* old = front;
-    front = front->next;
-    if (front == nullptr) rear = nullptr;
-    delete old;
-    return info;
+    if (!queueEmpty()) {
+        T info = front->data;
+        Element *old = front;
+        front = front->next;
+        if (front == nullptr) rear = nullptr;
+        delete old;
+        return info;
+    }
+    cout << "Pokusaj uzimanja elementa iz praznog niza!" << endl;
+    exit(2);
+
 }
 
 template <typename T>

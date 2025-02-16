@@ -38,7 +38,7 @@ void readCin(Queue<string>* q) {
     string granicnik = " ";
 
     while (true) {
-        //cin.ignore();
+        cin.ignore();
         getline(cin, line);
         if (line == "") break;
         stringstream x(line);
