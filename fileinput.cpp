@@ -31,6 +31,7 @@ void readFile(string path, Queue<string>* q) {
         }
         q->insertQueue(granicnik);
     }
+    file.close();
 }
 
 void readCin(Queue<string>* q) {

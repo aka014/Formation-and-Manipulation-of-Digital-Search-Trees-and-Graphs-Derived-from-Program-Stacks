@@ -4,8 +4,6 @@
 #include "Graph.h"
 
 
-//razmisli gde ces da zatvaras fajlove
-
 int main() {
     Queue<string> s1;
     Queue<string> s2;
