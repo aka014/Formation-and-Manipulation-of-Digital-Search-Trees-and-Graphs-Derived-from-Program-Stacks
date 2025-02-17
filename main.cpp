@@ -19,10 +19,10 @@ int main() {
     while (flag) {
 
         cout << "1. Napravi stablo" << endl << "2. Dodaj novi programski stek u stablo" << endl <<
-             "3. Ukloni programski stek iz stabla" << endl << "4. Ispisi stablo" <<
-             endl << "5. Obrisi stablo" << endl << "6. Pretvori stablo u graf" << endl <<
-             "7. Ispisi graf" << endl << "8. Proveri postojanje rekurzivnih poziva" << endl
-             << "9. Prekini program" << endl << endl;
+             "3. Ukloni programski stek iz stabla" << endl << "4. Ispisi stablo" << endl <<
+             "5. Ispisi stablo hijerarhijski" << endl << "6. Obrisi stablo" << endl << "7. Pretvori stablo u graf"
+             << endl << "8. Ispisi graf" << endl << "9. Proveri postojanje rekurzivnih poziva"
+             << endl << "10. Prekini program" << endl << endl;
 
         int num;
         cin >> num;
@@ -83,12 +83,17 @@ int main() {
                 cout << endl;
                 break;
             case 5:
-                t.deleteTree();
+                t.traversal_hierarchy();
+                cout << endl;
+                cout << endl;
                 break;
             case 6:
-                g.transformTree(&t);
+                t.deleteTree();
                 break;
             case 7:
+                g.transformTree(&t);
+                break;
+            case 8:
                 int n;
                 cout << "Unesite broj cvora od kojeg se pocinje: " << endl;
                 cin >> n;
@@ -96,11 +101,11 @@ int main() {
                 cout << endl;
                 cout << endl;
                 break;
-            case 8:
+            case 9:
                 g.detectRecursion();
                 cout << endl;
                 break;
-            case 9:
+            case 10:
                 flag = false;
                 break;
             default:

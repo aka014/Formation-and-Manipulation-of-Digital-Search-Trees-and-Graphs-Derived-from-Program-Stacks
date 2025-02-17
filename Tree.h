@@ -22,6 +22,8 @@ public:
 
     Tree& traversal();
 
+    Tree& traversal_hierarchy();
+
     Tree& deleteTree();
 
     ~Tree();

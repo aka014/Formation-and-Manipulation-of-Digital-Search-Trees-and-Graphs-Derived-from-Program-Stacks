@@ -149,6 +149,34 @@ Tree& Tree::traversal() {
     return *this;
 }
 
+Tree& Tree::traversal_hierarchy() {
+    if (root == nullptr) {
+        cout << "Prvo formirajte stablo!" << endl;
+        return *this;
+    }
+    Queue<Elem*> nq;
+    nq.insertQueue(root);
+    while (!nq.queueEmpty()) {
+        int levelSize = nq.size();
+
+        for (int i = 0; i < levelSize; i++) {
+            Elem* tek = nq.deleteQueue();
+            cout << tek->data << " ";
+
+            Elem* pom = tek->left;
+            while (pom) {
+                nq.insertQueue(pom);
+                pom = pom->right;
+            }
+
+        }
+
+        cout << endl;
+
+    }
+    return *this;
+}
+
 Tree& Tree::deleteTree() {
     if (root == nullptr) {
         cout << "Prvo formirajte stablo!" << endl;

@@ -15,7 +15,11 @@ public:
 
     bool queueEmpty() const;
 
+    int size() const { return queueSize; }
+
 private:
+    int queueSize = 0;
+
     struct Element {
         Element* next;
         T data;
@@ -40,6 +44,8 @@ Queue<T>& Queue<T>::insertQueue(T& d) {
         rear = novi;
     }
 
+    queueSize++;
+
     return *this;
 }
 
@@ -51,6 +57,7 @@ T Queue<T>::deleteQueue() {
         front = front->next;
         if (front == nullptr) rear = nullptr;
         delete old;
+        queueSize--;
         return info;
     }
     cout << "Pokusaj uzimanja elementa iz praznog niza!" << endl;
@@ -60,7 +67,7 @@ T Queue<T>::deleteQueue() {
 
 template <typename T>
 bool Queue<T>::queueEmpty() const {
-    if (front == nullptr) return true;
+    if (queueSize == 0) return true;
     return false;
 }
 
