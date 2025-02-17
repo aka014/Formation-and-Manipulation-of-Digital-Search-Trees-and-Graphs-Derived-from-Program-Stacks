@@ -1,10 +1,10 @@
 #ifndef ASP_NODE_H_
 #define ASP_NODE_H_
 
+/*Klasa koja predstavlja cvor stabla.*/
+
 #include <string>
 using namespace std;
-
-/*Klasa koja predstavlja cvor stabla.*/
 
 class Elem {
 public:

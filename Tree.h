@@ -1,10 +1,10 @@
 #ifndef ASP_DOMACI_REWORK_TREE_H
 #define ASP_DOMACI_REWORK_TREE_H
 
+/*Klasa koja predstavlja m-arno stablo. Stablo se gradi po principu "najlevlji sin - desni brat."*/
+
 #include "queue.h"
 #include <string>
-
-/*Klasa koja predstavlja m-arno stablo. Stablo se gradi po principu "najlevlji sin - desni brat."*/
 
 class Elem;
 

@@ -1,6 +1,8 @@
 #include "fileinput.h"
 #include <iostream>
 #include "Tree.h"
+#include "Graph.h"
+
 
 //razmisli gde ces da zatvaras fajlove
 
@@ -12,6 +14,7 @@ int main() {
     string name2 = "DodajStek.txt";
     string name3 = "ObrisiStek.txt";
     Tree t;
+    Graph g;
 
     volatile bool flag = true;
 
@@ -57,7 +60,6 @@ int main() {
                         break;
                     default:
                         cout << "Niste uneli validan ulaz"; exit(1);
-                        break;
                 }
                 t.insertStack(&s2);
                 break;
@@ -74,7 +76,6 @@ int main() {
                         break;
                     default:
                         cout << "Niste uneli validan ulaz"; exit(1);
-                        break;
                 }
                 t.deleteStack(&s3);
                 break;
@@ -85,6 +86,24 @@ int main() {
                 break;
             case 5:
                 t.deleteTree();
+                break;
+            case 6:
+                g.transformTree(&t);
+                break;
+            case 7:
+                int n;
+                cout << "Unesite broj cvora od kojeg se pocinje: " << endl;
+                cin >> n;
+                g.traversal(g.getNode(n));
+                cout << endl;
+                cout << endl;
+                break;
+            case 8:
+                g.detectRecursion();
+                cout << endl;
+                break;
+            case 9:
+                flag = false;
                 break;
             default:
                 cout << "Uneli ste nevalidan unos!" << endl;
