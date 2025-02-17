@@ -1,4 +1,4 @@
-# Forming and manipulation of program stacks digital search tree and graph
+# Forming and manipulation of program stack's digital search tree and graph
 
 ## Domaći zadatak iz predmeta Algoritmi i strukture podataka za 2023/2024 školsku godinu
 
