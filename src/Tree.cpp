@@ -1,6 +1,6 @@
-#include "Tree.h"
+#include "../h/Tree.h"
 #include <iostream>
-#include "node.h"
+#include "../h/node.h"
 
 Tree::Tree() {
     root = nullptr;

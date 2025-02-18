@@ -1,4 +1,4 @@
-#include "BoolStack.h"
+#include "../h/BoolStack.h"
 
 BoolStack::BoolStack() {
     stack = new bool* [30];

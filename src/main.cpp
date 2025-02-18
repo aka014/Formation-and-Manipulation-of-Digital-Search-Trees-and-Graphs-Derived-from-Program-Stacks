@@ -1,7 +1,7 @@
-#include "fileinput.h"
+#include "../h/fileinput.h"
 #include <iostream>
-#include "Tree.h"
-#include "Graph.h"
+#include "../h/Tree.h"
+#include "../h/Graph.h"
 
 
 int main() {

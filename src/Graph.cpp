@@ -1,7 +1,7 @@
-#include "Graph.h"
-#include "Tree.h"
-#include "BoolStack.h"
-#include "node.h"
+#include "../h/Graph.h"
+#include "../h/Tree.h"
+#include "../h/BoolStack.h"
+#include "../h/node.h"
 
 bool* Graph::getNode(int num) const {
     if (!array) {
