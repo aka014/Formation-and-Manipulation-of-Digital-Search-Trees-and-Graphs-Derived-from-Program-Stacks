@@ -8,9 +8,9 @@ int main() {
     Queue<string> s1;
     Queue<string> s2;
     Queue<string> s3;
-    string name1 = "UnesiStablo.txt";
-    string name2 = "DodajStek.txt";
-    string name3 = "ObrisiStek.txt";
+    string name1 = "txt/UnesiStablo.txt";
+    string name2 = "txt/DodajStek.txt";
+    string name3 = "txt/ObrisiStek.txt";
     Tree t;
     Graph g;
 
