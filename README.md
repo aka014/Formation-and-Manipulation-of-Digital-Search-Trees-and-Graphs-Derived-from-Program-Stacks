@@ -10,4 +10,4 @@ Postavka zadatka priložena je u PDF fajlu.
 
 The problem is solved having i=2 and j=4. 
 
-Homework requirements can be seen in the PDF file.
+Homework requirements are available in the PDF file.
